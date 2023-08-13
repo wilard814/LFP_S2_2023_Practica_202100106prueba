@@ -1,0 +1,6 @@
+Informe de Inventario:
+Producto          Cantidad     Precio Unitario     Valor Total     Ubicación
+------------------------------------------------------------------------------
+Manzanas         120.0        2.5                  $300.00 BodegaA
+Peras            30.0         3.0                  $90.00 BodegaB
+Platanos         105.0        1.75                 $183.75 BodegaC

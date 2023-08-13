@@ -1,35 +1,30 @@
+from cargar_entrada import leerArchivoInicial
+from cargar_movimientos import cargarMovimientos
+from crear_informe import crearInforme
+
+ubicaciones = {}
+
 opcion = 0
 
 while opcion != 4:
-    print("-"*20)
+    print("-" * 10)
     print("Practica 1")
-
     print("1. Cargar inventario inicial")
     print("2. Cargar movimientos")
     print("3. Crear informe")
-    print("4. Salir \n" )
-          
-    print("Ingrese una opcion: ")
+    print("4. Salir \n")
+    print("Ingrese una opcion:")
     opcion = int(input())
 
     if opcion == 1:
-        print("Cargar inventario inicial")
-        lineas = leer_archivo_inicial()
-        print("Archivo cargado exitosamente")
-        for i in lineas:
-            instruccion = i.split(" ")
-            print(instruccion)
-            if(instruccion [0] == "crear_producto"):
-                print("Encontre una instruccion para crear")
-            datos = instruccion[1].split(";")
-        pass
+        archivo_inventario = input("Ingrese la ruta del archivo de inventario: ")
+        leerArchivoInicial(archivo_inventario, ubicaciones)
     elif opcion == 2:
-        print("Cargar movimientos")
-        cargar_movimientos()
-        pass
+        archivo_movimientos = input("Ingrese la ruta del archivo de movimientos: ")
+        cargarMovimientos(archivo_movimientos, ubicaciones)
     elif opcion == 3:
         print("Crear informe")
-        pass
+        crearInforme(ubicaciones)
     elif opcion == 4:
-        print("Salir")
+        print("Salida")
         break
